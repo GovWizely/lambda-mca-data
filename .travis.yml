@@ -3,6 +3,5 @@ go:
     - "1.10.x"
 
 script:
-    - test -z $(gofmt -s -l mca/*.go)
     - go test -v ./...
     - go vet ./...
