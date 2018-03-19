@@ -1,6 +1,7 @@
 # MCA Trade Lead Data Transformer
 
 [![Build Status](https://travis-ci.org/GovWizely/lambda-mca-data.svg)](https://travis-ci.org/GovWizely/lambda-mca-data)
+[![Go Report Card](https://goreportcard.com/badge/github.com/GovWizely/lambda-mca-data)](https://goreportcard.com/report/github.com/GovWizely/lambda-mca-data)
 ![Contributers](https://img.shields.io/github/contributors/GovWizely/lambda-mca-data.svg?maxAge=2592000) 
 
  **`lambda-mca-data`** is a scraper/transformer of [MCA Trade Lead data from dgMarket](http://www.dgmarket.com/tenders/ShowRssFeeds.do) 

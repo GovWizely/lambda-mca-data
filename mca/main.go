@@ -17,10 +17,12 @@ import (
 	"github.com/mmcdole/gofeed"
 )
 
+// Response : Contains the message sent back in the Lambda response
 type Response struct {
 	Message string
 }
 
+// McaDataItem : Contains the output data structure components for MCA data
 type McaDataItem struct {
 	Title       string
 	Link        string
@@ -34,9 +36,13 @@ type McaDataItem struct {
 
 var re = regexp.MustCompile("country/(..) - (.*)")
 
+// FILENAME : The S3 key
 const FILENAME = "mca-data.json"
+// BUCKET : The S3 bucket where the JSON data will be written (must already exist)
 const BUCKET = "trade-leads"
+// REGION : The AWS region for the S3 session
 const REGION = "us-east-1"
+// URL : The RSS feed URL, when it's working
 const URL = "https://www.dgmarket.com/tenders/RssFeedAction.do?locationISO=&keywords=Millennium+Challenge+Account&" +
 	"sub=&noticeType=gpn%2cpp%2cspn%2crfc&language"
 
@@ -105,6 +111,7 @@ func processFeed() string {
 	return fmt.Sprintf("Successfully uploaded %s to %s", FILENAME, result.Location)
 }
 
+// Handler : Gets called when the Lambda code is invoked
 func Handler() (Response, error) {
 	responseStr := processFeed()
 	return Response{Message: responseStr}, nil
