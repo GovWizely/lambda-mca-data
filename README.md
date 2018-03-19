@@ -10,7 +10,6 @@
                        the resulting items as well-formed JSON to the `mca-data.json` file in the `mca-trade-leads-data` S3 bucket. If there 
 		       are no items in the source feed or the feed cannot be parsed, the lambda exits.
 
-
 ## Installation
 
 ### Prerequisites
