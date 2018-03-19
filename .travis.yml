@@ -3,5 +3,6 @@ go:
     - "1.10.x"
 
 script:
+    - make build
     - go test -v ./...
     - go vet ./...
