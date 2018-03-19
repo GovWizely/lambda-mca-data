@@ -7,8 +7,10 @@
                        that runs on [AWS Lambda](https://aws.amazon.com/lambda/) using the 
                        [Serverless Go](https://serverless.com/framework/docs/providers/aws/examples/hello-world/go/#hello-world-go-example) 
                        framework. It extracts country name and country code from the multi-value `<category>` attribute, and uploads
-                       the resulting items as well-formed JSON to the `mca-data.json` file in the `mca-trade-leads-data` S3 bucket. If there 
-		       are no items in the source feed or the feed cannot be parsed, the lambda exits.
+                       the resulting items as well-formed JSON to the `mca-data.json` file in the `trade-leads` S3 
+                       bucket for the account you have specified via your AWS credentials. *The bucket must already be
+                       created.* If there 
+		               are no items in the source feed or the feed cannot be parsed, the lambda exits.
 
 ## Installation
 

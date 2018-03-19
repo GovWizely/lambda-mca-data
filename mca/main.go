@@ -35,7 +35,7 @@ type McaDataItem struct {
 var re = regexp.MustCompile("country/(..) - (.*)")
 
 const FILENAME = "mca-data.json"
-const BUCKET = "mca-trade-leads-data"
+const BUCKET = "trade-leads"
 const REGION = "us-east-1"
 const URL = "https://www.dgmarket.com/tenders/RssFeedAction.do?locationISO=&keywords=Millennium+Challenge+Account&" +
 	"sub=&noticeType=gpn%2cpp%2cspn%2crfc&language"

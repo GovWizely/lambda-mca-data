@@ -12,5 +12,6 @@ install:
 
 script:
     - make build
+    - test -z $(gofmt -s -l mca/*.go)
     - go test -v ./...
     - go vet ./...
