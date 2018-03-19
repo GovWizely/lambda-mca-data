@@ -38,10 +38,13 @@ var re = regexp.MustCompile("country/(..) - (.*)")
 
 // FILENAME : The S3 key
 const FILENAME = "mca-data.json"
+
 // BUCKET : The S3 bucket where the JSON data will be written (must already exist)
 const BUCKET = "trade-leads"
+
 // REGION : The AWS region for the S3 session
 const REGION = "us-east-1"
+
 // URL : The RSS feed URL, when it's working
 const URL = "https://www.dgmarket.com/tenders/RssFeedAction.do?locationISO=&keywords=Millennium+Challenge+Account&" +
 	"sub=&noticeType=gpn%2cpp%2cspn%2crfc&language"
